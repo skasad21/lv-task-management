@@ -24,5 +24,7 @@ Route::get('/ourpage', function () {
 });
 
 Route::get('/', [TasksController::class,'index']);
-Route::get('/createTaskForm', [TasksController::class,'createTaskForm']);
+Route::get('/createTaskForm', [TasksController::class,'createTaskForm'])->name('createTaskForm');
 Route::post('/createNewTask', [TasksController::class,'createNewTask'])->name('createNewTask');
+Route::get('/editTaskForm/{id}', [TasksController::class,'editTaskForm'])->name('editTaskForm');
+Route::post('/editTask', [TasksController::class,'editTask'])->name('editTask');

@@ -292,39 +292,6 @@
 
 
 
-     // Form
-     $(document).ready(function() {
-         $(".submit_btnqq").click('#btn-moreqq', function(e) {
-             e.preventDefault();
-             var _token = $("input[name='_token']").val();
-             var firstname = $("input[name='firstname']").val();
-             var secondname = $("input[name='secondname']").val();
-             var address = $("textarea[name='address']").val();
-             if (firstname == "") {
-                 alert('First Name is Required');
-             } else if (secondname == "") {
-                 alert('Last Name is Required');
-             } else if (address == "") {
-                 alert('Address is Required');
-             } else {
-                 $.ajax({
-                     url: "www.website.com/insertdata",
-                     type: 'POST',
-                     data: {
-                         _token: _token,
-                         firstname: firstname,
-                         secondname: secondname,
-                         address: address
-                     },
-                     success: function(data) {
-                         $('#btn-moreqq').html("Register");
-                         $('#display_info').html('Successfully Form is Submitted.');
-                         $("#myform")[0].reset();
-                     }
-                 });
-             }
-         });
-     });
 
 
  </script>
